@@ -2,8 +2,19 @@ pipeline {
   agent any
   stages {
     stage('Ashu') {
-      steps {
-        sh 'ls'
+      parallel {
+        stage('Ashu') {
+          steps {
+            sh 'ls'
+          }
+        }
+
+        stage('Prod') {
+          steps {
+            sh 'dir'
+          }
+        }
+
       }
     }
 
