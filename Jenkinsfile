@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Ashu') {
       steps {
-        sh 'hello'
+        sh 'ls'
       }
     }
 
